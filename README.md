@@ -1,7 +1,7 @@
 # iOSAuthKit
 
 # 1. corecrypt 部分
-    这部分代码来自于苹果官方开源项目corecrypto 或者iOS/macos 的libcommoncrypto。 https://github.com/samdmarshall/apple-corecrypto
+    这部分代码来自于苹果官方开源项目corecrypto 或者iOS/macos 的libcommoncrypto。 https://github.com/samdmarshall/apple-corecrypto 
 # 2. srp 部分
     这主要来自于对Authkit iOS10 和windows itunes 12.6.x 版本逆向分析。 苹果的srp 是非常标准的srp-6a版本。 hash函数为sha256. aes为aes_cbc_mode。
     aes的密钥计算采用pbkdf2算法。 在gsa登陆最后一步。 通过解密spd字段，得到所有的二级token授权。 拿这个token就能访问苹果的服务了。
