@@ -6,7 +6,7 @@
 # 2. srp 部分
     这主要来自于对Authkit iOS10 和windows itunes 12.6.x 版本逆向分析。 苹果的srp 是非常标准的srp-6a版本。 hash函数为sha256. aes为aes_cbc_mode。
     aes的密钥计算采用pbkdf2算法。 在gsa登陆最后一步。 通过解密spd字段，得到所有的二级token授权。 拿这个token就能访问苹果的服务了。
-    https://github.com/mwpcheung/gsalogin
+    [srp登陆完整代码 golang](https://github.com/mwpcheung/gsalogin)
 # 3. 数据部分
     来自于对iOS 10 登陆过程抓包
 # 4. ollvm
